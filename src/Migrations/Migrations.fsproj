@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\*.sql"/>
+    <Compile Include="Runner.fs" />
+    <Compile Include="Migrate.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Environment\Environment.fsproj"/>
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Configuration.fs" />
+    <Compile Include="ErrorHandling.fs" />
+
+    <Compile Include="Database\PGConnector.fs" />
+    <Compile Include="Database\SQLMapper.fs" />
+    
+    <Compile Include="CpfScoring\Domain.fs" />
+    <Compile Include="CpfScoring\Repository.fs" />
+    <Compile Include="CpfScoring\ScoringService.fs" />
+    <Compile Include="CpfScoring\Controller.fs" />
+
+    <Compile Include="Server.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Environment\Environment.fsproj"/>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="BrazilianUtils" Version="2.0.0" />
+  </ItemGroup>
+
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
