@@ -1,0 +1,21 @@
+source https://api.nuget.org/v3/index.json
+storage: none
+
+framework: net6.0
+
+nuget FSharp.Core
+
+nuget Saturn
+
+nuget Simple.Migrations
+
+nuget Npgsql 6.0.0-preview2 preview
+nuget SQLProvider
+nuget dbup-postgresql
+
+nuget FsToolkit.ErrorHandling 2.1.2
+nuget FSharpPlus 1.2.2
+
+nuget FsConfig
+
+nuget TaskBuilder.fs 2.2.0-alpha alpha
