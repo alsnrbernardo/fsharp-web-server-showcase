@@ -1,5 +1,6 @@
 # score-api
-Mock REST API for CPF scoring based on F# Saturn's Template
+
+POC API for CPF scoring based on F# and the SAFE stack
 
 ### Setting the application up (from scratch)
 
@@ -26,13 +27,17 @@ dotnet fake build -t run
 
 ### Testing
 
-To interact with the api, use a REST testing tool like [Postman](https://www.postman.com/downloads/).
-
 API endpoints:
+
+* `GET /health` check if the server is running.
+```
+curl --request GET \
+--url http://localhost:8085/health
+```
 
 * `GET /score/<CPF>` fetches the values and creation dates of scores attributed to the given [CPF](https://theonegenerator.com/generators/documents/cpf-generator/).
  ```
- curl --request GET \                
+ curl --request GET \
 --url http://localhost:8085/score/xxxxxxxxxxx \
 --header 'Content-Type: application/json'
  ```
@@ -40,7 +45,7 @@ API endpoints:
 * `POST /score` scores and registers the provided CPF
 ```
 curl --request POST \
---url http://localhost:8085/score \ 
+--url http://localhost:8085/score \
 --header 'Content-Type: application/json' \
 --data '{ "cpf": "xxxxxxxxxxx" }}'
 ```
