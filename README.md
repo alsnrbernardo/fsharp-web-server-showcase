@@ -1,6 +1,6 @@
 # score-api
 
-POC API for CPF scoring based on F# and the SAFE stack
+POC API for CPF scoring based on F# (Dotnet 6) and the SAFE stack.
 
 ### Setting the application up (from scratch)
 
@@ -12,17 +12,21 @@ docker run --name db-pgsql -e POSTGRES_PASSWORD=passw0rd -p 5432:5432 -d postgre
 ```sh
 git clone https://github.com/alsnrbernardo/score-api.git && cd score-api
 ```
-- Build the score-api
+- Set up the dependencies
 ```sh
-dotnet tool restore
+dotnet tool restore && dotnet paket install
+```
+- Build the solution
+```
+dotnet build .
 ```
 - Perform database migration (depends on Postgres container)
 ```sh
-dotnet saturn migration
+dotnet run --project src/Migrations
 ```
 - Run the application (available at http://localhost:8085)
 ```sh
-dotnet fake build -t run
+dotnet run --project src/Scoring-API
 ```
 
 ### Testing
