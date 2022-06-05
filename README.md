@@ -1,6 +1,6 @@
 # Scoring-API
 
-POC API for scoring CPFs based on F# (Dotnet 6) and the SAFE stack. 
+POC API for scoring CPFs based on F# (Dotnet 6) and the Saturn Framework. 
 
 # Frameworks/Libraries
 
