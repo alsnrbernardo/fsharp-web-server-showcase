@@ -1,6 +1,13 @@
 # Scoring-API
 
-POC API for scoring CPFs based on F# (Dotnet 6) and the SAFE stack.
+POC API for scoring CPFs based on F# (Dotnet 6) and the SAFE stack. 
+
+# Frameworks/Libraries
+
+- [Saturn](https://saturnframework.org/) & [Giraffe](https://giraffe.wiki/)
+- [DbUp](https://dbup.readthedocs.io/en/latest/)
+- [SqlProvider](https://fsprojects.github.io/SQLProvider/) (+ [Query Expressions](https://docs.microsoft.com/en-us/dotnet/fsharp/language-reference/query-expressions))
+- [FSharpPlus](https://fsprojects.github.io/FSharpPlus/) & [FsToolkit-ErrorHandling](https://demystifyfp.gitbook.io/fstoolkit-errorhandling)
 
 ### Setting the application up (from scratch)
 
